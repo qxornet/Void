@@ -1,0 +1,52 @@
+﻿Построение начато 07.03.2019 23:33:40.
+     1>Проект "F:\git_exercise\VOID\SeePage\SeePage.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Обращение к "Release\VOID.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       Целевой объект "GenerateTargetFrameworkMonikerAttribute" пропускается, так как все выходные файлы актуальны по отношению к входным.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.MetaGen.targets(91,5): warning : Отсутствует обязательный файл "F:\GIT_EXERCISE\SEEPAGE\RELEASE\FASTCOLOREDTEXTBOX.DLL".
+         Предыдущая ошибка преобразована в предупреждение, так как задача вызывалась с атрибутом ContinueOnError=true.
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+         Для всех выходных данных обновления не требуется.
+         Для всех выходных данных обновления не требуется.
+       CoreResGen:
+         Отсутствуют ресурсы, устаревшие по отношению к файлам своих источников. Пропуск формирования ресурсов.
+       ResourceCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         f:\Visual\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\git_exercise\VOID\Release\VOID.exe" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:Release\SeePage.Browser.resources /ASSEMBLYRESOURCE:Release\SeePage.cipher_manage.resources /ASSEMBLYRESOURCE:Release\SeePage.CreateLibs.resources /ASSEMBLYRESOURCE:Release\SeePage.database_connect.resources /ASSEMBLYRESOURCE:Release\SeePage.database_manager.resources /ASSEMBLYRESOURCE:Release\SeePage.Form1.resources /ASSEMBLYRESOURCE:Release\SeePage.Helper.resources /ASSEMBLYRESOURCE:Release\SeePage.logo.resources /ASSEMBLYRESOURCE:Release\SeePage.MailSend.resources /ASSEMBLYRESOURCE:Release\SeePage.net_classWrtServer.resources /ASSEMBLYRESOURCE:Release\SeePage.New.resources /ASSEMBLYRESOURCE:Release\SeePage.NewElement.resources /ASSEMBLYRESOURCE:Release\SeePage.Upload.resources /MANIFEST /ManifestFile:"Release\VOID.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\git_exercise\VOID\Release\VOID.pdb" /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Release\app.res
+         Release\1.obj
+         Release\AssemblyInfo.obj
+         Release\Browser.obj
+         Release\cipher_manage.obj
+         Release\CreateLibs.obj
+         Release\database_connect.obj
+         Release\database_manager.obj
+         Release\Form1.obj
+         Release\Form2.obj
+         Release\Form21.obj
+         Release\Helper.obj
+         Release\logo.obj
+         Release\MailSend.obj
+         Release\net_classWrtServer.obj
+         Release\New.obj
+         Release\NewElement.obj
+         Release\SeePage.obj
+         Release\stdafx.obj
+         Release\Upload.obj
+         Release\Widget.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         Создание кода
+         Создание кода завершено
+         SeePage.vcxproj -> F:\git_exercise\VOID\Release\VOID.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\git_exercise\VOID\Release\VOID.exe;#1" /manifest Release\VOID.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Файл "Release\VOID.unsuccessfulbuild" удаляется.
+         Обращение к "Release\VOID.lastbuildstate".
+     1>Построение проекта "F:\git_exercise\VOID\SeePage\SeePage.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:05.35

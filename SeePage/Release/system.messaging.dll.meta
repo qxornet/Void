@@ -1,0 +1,1229 @@
+  System.Messaging.resources - Embedded, ContainedInManifestFile, 
+  System.Messaging.Machine.bmp - Embedded, ContainedInManifestFile, 
+  System.Messaging.PublicQueue.bmp - Embedded, ContainedInManifestFile, 
+  System.Messaging.MessageQueue.bmp - Embedded, ContainedInManifestFile, 
+  System.Messaging.Design.QueuePathDialog.resources - Embedded, ContainedInManifestFile, 
+Assembly System.Messaging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Configuration.Install, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Assembly System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Assembly System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Assembly System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Class System.Messaging.AccessControlEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.Trustee): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.Trustee, System.Messaging.GenericAccessRights, System.Messaging.StandardAccessRights, System.Messaging.AccessControlEntryType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Messaging.AccessControlEntryType EntryType 'get set' : 
+    System.Messaging.GenericAccessRights GenericAccessRights 'get set' : 
+    System.Messaging.StandardAccessRights StandardAccessRights 'get set' : 
+    System.Messaging.Trustee Trustee 'get set' : 
+  Methods:
+    get_EntryType(): PrivateScope, Public, HideBySig, SpecialName
+    set_EntryType(AccessControlEntryType): PrivateScope, Public, HideBySig, SpecialName
+    get_GenericAccessRights(): PrivateScope, Public, HideBySig, SpecialName
+    set_GenericAccessRights(GenericAccessRights): PrivateScope, Public, HideBySig, SpecialName
+    get_StandardAccessRights(): PrivateScope, Public, HideBySig, SpecialName
+    set_StandardAccessRights(StandardAccessRights): PrivateScope, Public, HideBySig, SpecialName
+    get_Trustee(): PrivateScope, Public, HideBySig, SpecialName
+    set_Trustee(Trustee): PrivateScope, Public, HideBySig, SpecialName
+Struct System.Messaging.AccessControlEntryType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.AccessControlEntryType Allow = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.AccessControlEntryType Set = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.AccessControlEntryType Deny = 3 : Public, Static, Literal, HasDefault
+    System.Messaging.AccessControlEntryType Revoke = 4 : Public, Static, Literal, HasDefault
+Class System.Messaging.AccessControlList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Add(AccessControlEntry): PrivateScope, Public, HideBySig
+    Insert(Int32, AccessControlEntry): PrivateScope, Public, HideBySig
+    IndexOf(AccessControlEntry): PrivateScope, Public, HideBySig
+    Contains(AccessControlEntry): PrivateScope, Public, HideBySig
+    Remove(AccessControlEntry): PrivateScope, Public, HideBySig
+    CopyTo(AccessControlEntry[], Int32): PrivateScope, Public, HideBySig
+Struct System.Messaging.Acknowledgment: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.Acknowledgment None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment AccessDenied = 32772 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment BadDestinationQueue = 32768 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment BadEncryption = 32775 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment BadSignature = 32774 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment CouldNotEncrypt = 32776 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment HopCountExceeded = 32773 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment NotTransactionalQueue = 32777 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment NotTransactionalMessage = 32778 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment Purged = 32769 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment QueueDeleted = 49152 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment QueueExceedMaximumSize = 32771 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment QueuePurged = 49153 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment ReachQueue = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment ReachQueueTimeout = 32770 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment ReceiveTimeout = 49154 : Public, Static, Literal, HasDefault
+    System.Messaging.Acknowledgment Receive = 16384 : Public, Static, Literal, HasDefault
+Struct System.Messaging.AcknowledgeTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.AcknowledgeTypes PositiveArrival = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes PositiveReceive = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes NegativeReceive = 8 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes NotAcknowledgeReachQueue = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes NotAcknowledgeReceive = 12 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes FullReachQueue = 5 : Public, Static, Literal, HasDefault
+    System.Messaging.AcknowledgeTypes FullReceive = 14 : Public, Static, Literal, HasDefault
+Interface System.Messaging.IMessageFormatter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.ICloneable
+  Methods:
+    CanRead(Message): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Read(Message): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Write(Message, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class System.Messaging.ActiveXMessageFormatter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Messaging.IMessageFormatter
+    System.ICloneable
+  Methods:
+    CanRead(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    InitStreamedObject(Object): PrivateScope, Public, Static, HideBySig
+    Read(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Write(Message, Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.Messaging.BinaryMessageFormatter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle, System.Runtime.Serialization.Formatters.FormatterTypeStyle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Messaging.IMessageFormatter
+    System.ICloneable
+  Properties:
+    System.Runtime.Serialization.Formatters.FormatterAssemblyStyle TopObjectFormat 'get set' : 
+    System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat 'get set' : 
+  Methods:
+    get_TopObjectFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopObjectFormat(FormatterAssemblyStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_TypeFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_TypeFormat(FormatterTypeStyle): PrivateScope, Public, HideBySig, SpecialName
+    CanRead(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Read(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Write(Message, Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.CryptographicProviderType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.CryptographicProviderType None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType RsaFull = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType RsqSig = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType Dss = 3 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType Fortezza = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType MicrosoftExchange = 5 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType Ssl = 6 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType SttMer = 7 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType SttAcq = 8 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType SttBrnd = 9 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType SttRoot = 10 : Public, Static, Literal, HasDefault
+    System.Messaging.CryptographicProviderType SttIss = 11 : Public, Static, Literal, HasDefault
+Class System.Messaging.Cursor: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Close(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.Messaging.DefaultPropertiesToSend: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Messaging.AcknowledgeTypes AcknowledgeType 'get set' : 
+    System.Messaging.MessageQueue AdministrationQueue 'get set' : 
+    Int32 AppSpecific 'get set' : 
+    Boolean AttachSenderId 'get set' : 
+    System.Messaging.EncryptionAlgorithm EncryptionAlgorithm 'get set' : 
+    Byte[] Extension 'get set' : 
+    System.Messaging.HashAlgorithm HashAlgorithm 'get set' : 
+    System.String Label 'get set' : 
+    System.Messaging.MessagePriority Priority 'get set' : 
+    Boolean Recoverable 'get set' : 
+    System.Messaging.MessageQueue ResponseQueue 'get set' : 
+    System.TimeSpan TimeToBeReceived 'get set' : 
+    System.TimeSpan TimeToReachQueue 'get set' : 
+    System.Messaging.MessageQueue TransactionStatusQueue 'get set' : 
+    Boolean UseAuthentication 'get set' : 
+    Boolean UseDeadLetterQueue 'get set' : 
+    Boolean UseEncryption 'get set' : 
+    Boolean UseJournalQueue 'get set' : 
+    Boolean UseTracing 'get set' : 
+  Methods:
+    get_AcknowledgeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AcknowledgeType(AcknowledgeTypes): PrivateScope, Public, HideBySig, SpecialName
+    get_AdministrationQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_AdministrationQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_AppSpecific(): PrivateScope, Public, HideBySig, SpecialName
+    set_AppSpecific(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_AttachSenderId(): PrivateScope, Public, HideBySig, SpecialName
+    set_AttachSenderId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EncryptionAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_EncryptionAlgorithm(EncryptionAlgorithm): PrivateScope, Public, HideBySig, SpecialName
+    get_Extension(): PrivateScope, Public, HideBySig, SpecialName
+    set_Extension(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_HashAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_HashAlgorithm(HashAlgorithm): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Priority(): PrivateScope, Public, HideBySig, SpecialName
+    set_Priority(MessagePriority): PrivateScope, Public, HideBySig, SpecialName
+    get_Recoverable(): PrivateScope, Public, HideBySig, SpecialName
+    set_Recoverable(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ResponseQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_ResponseQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToBeReceived(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToBeReceived(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToReachQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToReachQueue(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_TransactionStatusQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TransactionStatusQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_UseAuthentication(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseAuthentication(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseDeadLetterQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseDeadLetterQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseEncryption(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseEncryption(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseJournalQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseJournalQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseTracing(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseTracing(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Struct System.Messaging.EncryptionAlgorithm: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.EncryptionAlgorithm None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.EncryptionAlgorithm Rc2 = 26114 : Public, Static, Literal, HasDefault
+    System.Messaging.EncryptionAlgorithm Rc4 = 26625 : Public, Static, Literal, HasDefault
+Struct System.Messaging.EncryptionRequired: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.EncryptionRequired None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.EncryptionRequired Optional = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.EncryptionRequired Body = 2 : Public, Static, Literal, HasDefault
+Struct System.Messaging.GenericAccessRights: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.GenericAccessRights All = 268435456 : Public, Static, Literal, HasDefault
+    System.Messaging.GenericAccessRights Execute = 536870912 : Public, Static, Literal, HasDefault
+    System.Messaging.GenericAccessRights Write = 1073741824 : Public, Static, Literal, HasDefault
+    System.Messaging.GenericAccessRights Read = -2147483648 : Public, Static, Literal, HasDefault
+    System.Messaging.GenericAccessRights None = 0 : Public, Static, Literal, HasDefault
+Struct System.Messaging.HashAlgorithm: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.HashAlgorithm None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.HashAlgorithm Md2 = 32769 : Public, Static, Literal, HasDefault
+    System.Messaging.HashAlgorithm Md4 = 32770 : Public, Static, Literal, HasDefault
+    System.Messaging.HashAlgorithm Md5 = 32771 : Public, Static, Literal, HasDefault
+    System.Messaging.HashAlgorithm Sha = 32772 : Public, Static, Literal, HasDefault
+    System.Messaging.HashAlgorithm Mac = 32773 : Public, Static, Literal, HasDefault
+Class System.Messaging.Message: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object, System.Messaging.IMessageFormatter): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.TimeSpan InfiniteTimeout : Public, Static, InitOnly
+  Properties:
+    System.Messaging.Acknowledgment Acknowledgment 'get ' : 
+    System.Messaging.AcknowledgeTypes AcknowledgeType 'get set' : 
+    System.Messaging.MessageQueue AdministrationQueue 'get set' : 
+    Int32 AppSpecific 'get set' : 
+    System.DateTime ArrivedTime 'get ' : 
+    Boolean AttachSenderId 'get set' : 
+    Boolean Authenticated 'get ' : 
+    System.String AuthenticationProviderName 'get set' : 
+    System.Messaging.CryptographicProviderType AuthenticationProviderType 'get set' : 
+    System.Object Body 'get set' : 
+    System.IO.Stream BodyStream 'get set' : 
+    Int32 BodyType 'get set' : 
+    System.Guid ConnectorType 'get set' : 
+    System.String CorrelationId 'get set' : 
+    System.Messaging.MessageQueue DestinationQueue 'get ' : 
+    Byte[] DestinationSymmetricKey 'get set' : 
+    Byte[] DigitalSignature 'get set' : 
+    System.Messaging.EncryptionAlgorithm EncryptionAlgorithm 'get set' : 
+    Byte[] Extension 'get set' : 
+    System.Messaging.IMessageFormatter Formatter 'get set' : 
+    System.Messaging.HashAlgorithm HashAlgorithm 'get set' : 
+    System.String Id 'get ' : 
+    Boolean IsFirstInTransaction 'get ' : 
+    Boolean IsLastInTransaction 'get ' : 
+    System.String Label 'get set' : 
+    Int64 LookupId 'get ' : 
+    System.Messaging.MessageType MessageType 'get ' : 
+    System.Messaging.MessagePriority Priority 'get set' : 
+    Boolean Recoverable 'get set' : 
+    System.Messaging.MessageQueue ResponseQueue 'get set' : 
+    System.Messaging.SecurityContext SecurityContext 'get set' : 
+    Byte[] SenderCertificate 'get set' : 
+    Byte[] SenderId 'get ' : 
+    Int64 SenderVersion 'get ' : 
+    System.DateTime SentTime 'get ' : 
+    System.String SourceMachine 'get ' : 
+    System.TimeSpan TimeToBeReceived 'get set' : 
+    System.TimeSpan TimeToReachQueue 'get set' : 
+    System.String TransactionId 'get ' : 
+    System.Messaging.MessageQueue TransactionStatusQueue 'get set' : 
+    Boolean UseAuthentication 'get set' : 
+    Boolean UseDeadLetterQueue 'get set' : 
+    Boolean UseEncryption 'get set' : 
+    Boolean UseJournalQueue 'get set' : 
+    Boolean UseTracing 'get set' : 
+  Methods:
+    get_Acknowledgment(): PrivateScope, Public, HideBySig, SpecialName
+    get_AcknowledgeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AcknowledgeType(AcknowledgeTypes): PrivateScope, Public, HideBySig, SpecialName
+    get_AdministrationQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_AdministrationQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_AppSpecific(): PrivateScope, Public, HideBySig, SpecialName
+    set_AppSpecific(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrivedTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_AttachSenderId(): PrivateScope, Public, HideBySig, SpecialName
+    set_AttachSenderId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Authenticated(): PrivateScope, Public, HideBySig, SpecialName
+    get_AuthenticationProviderName(): PrivateScope, Public, HideBySig, SpecialName
+    set_AuthenticationProviderName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_AuthenticationProviderType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AuthenticationProviderType(CryptographicProviderType): PrivateScope, Public, HideBySig, SpecialName
+    get_Body(): PrivateScope, Public, HideBySig, SpecialName
+    set_Body(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_BodyStream(): PrivateScope, Public, HideBySig, SpecialName
+    set_BodyStream(Stream): PrivateScope, Public, HideBySig, SpecialName
+    get_BodyType(): PrivateScope, Public, HideBySig, SpecialName
+    set_BodyType(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ConnectorType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConnectorType(Guid): PrivateScope, Public, HideBySig, SpecialName
+    get_CorrelationId(): PrivateScope, Public, HideBySig, SpecialName
+    set_CorrelationId(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DestinationQueue(): PrivateScope, Public, HideBySig, SpecialName
+    get_DestinationSymmetricKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_DestinationSymmetricKey(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_DigitalSignature(): PrivateScope, Public, HideBySig, SpecialName
+    set_DigitalSignature(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_EncryptionAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_EncryptionAlgorithm(EncryptionAlgorithm): PrivateScope, Public, HideBySig, SpecialName
+    get_Extension(): PrivateScope, Public, HideBySig, SpecialName
+    set_Extension(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Formatter(): PrivateScope, Public, HideBySig, SpecialName
+    set_Formatter(IMessageFormatter): PrivateScope, Public, HideBySig, SpecialName
+    get_HashAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_HashAlgorithm(HashAlgorithm): PrivateScope, Public, HideBySig, SpecialName
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFirstInTransaction(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsLastInTransaction(): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LookupId(): PrivateScope, Public, HideBySig, SpecialName
+    get_MessageType(): PrivateScope, Public, HideBySig, SpecialName
+    get_Priority(): PrivateScope, Public, HideBySig, SpecialName
+    set_Priority(MessagePriority): PrivateScope, Public, HideBySig, SpecialName
+    get_Recoverable(): PrivateScope, Public, HideBySig, SpecialName
+    set_Recoverable(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ResponseQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_ResponseQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_SecurityContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_SecurityContext(SecurityContext): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderCertificate(): PrivateScope, Public, HideBySig, SpecialName
+    set_SenderCertificate(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderId(): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderVersion(): PrivateScope, Public, HideBySig, SpecialName
+    get_SentTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceMachine(): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToBeReceived(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToBeReceived(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToReachQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToReachQueue(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_TransactionId(): PrivateScope, Public, HideBySig, SpecialName
+    get_TransactionStatusQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TransactionStatusQueue(MessageQueue): PrivateScope, Public, HideBySig, SpecialName
+    get_UseAuthentication(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseAuthentication(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseDeadLetterQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseDeadLetterQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseEncryption(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseEncryption(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseJournalQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseJournalQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseTracing(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseTracing(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class System.Messaging.MessageEnumerator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.MarshalByRefObject
+  Interfaces:
+    System.Collections.IEnumerator
+    System.IDisposable
+  Properties:
+    System.Messaging.Message Current 'get ' : 
+    IntPtr CursorHandle 'get ' : 
+  Methods:
+    get_Current(): PrivateScope, Public, HideBySig, SpecialName
+    get_CursorHandle(): PrivateScope, Public, HideBySig, SpecialName
+    Close(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    MoveNext(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    MoveNext(TimeSpan): PrivateScope, Public, HideBySig
+    RemoveCurrent(): PrivateScope, Public, HideBySig
+    RemoveCurrent(MessageQueueTransaction): PrivateScope, Public, HideBySig
+    RemoveCurrent(MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    RemoveCurrent(TimeSpan): PrivateScope, Public, HideBySig
+    RemoveCurrent(TimeSpan, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    RemoveCurrent(TimeSpan, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.MessageLookupAction: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageLookupAction Current = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageLookupAction Next = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageLookupAction Previous = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageLookupAction First = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageLookupAction Last = 8 : Public, Static, Literal, HasDefault
+Struct System.Messaging.MessagePriority: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessagePriority Lowest = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority VeryLow = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority Low = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority Normal = 3 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority AboveNormal = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority High = 5 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority VeryHigh = 6 : Public, Static, Literal, HasDefault
+    System.Messaging.MessagePriority Highest = 7 : Public, Static, Literal, HasDefault
+Class System.Messaging.MessagePropertyFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.ICloneable
+  Properties:
+    Boolean Acknowledgment 'get set' : 
+    Boolean AcknowledgeType 'get set' : 
+    Boolean AdministrationQueue 'get set' : 
+    Boolean AppSpecific 'get set' : 
+    Boolean ArrivedTime 'get set' : 
+    Boolean AttachSenderId 'get set' : 
+    Boolean Authenticated 'get set' : 
+    Boolean AuthenticationProviderName 'get set' : 
+    Boolean AuthenticationProviderType 'get set' : 
+    Boolean Body 'get set' : 
+    Boolean ConnectorType 'get set' : 
+    Boolean CorrelationId 'get set' : 
+    Int32 DefaultBodySize 'get set' : 
+    Int32 DefaultExtensionSize 'get set' : 
+    Int32 DefaultLabelSize 'get set' : 
+    Boolean DestinationQueue 'get set' : 
+    Boolean DestinationSymmetricKey 'get set' : 
+    Boolean DigitalSignature 'get set' : 
+    Boolean EncryptionAlgorithm 'get set' : 
+    Boolean Extension 'get set' : 
+    Boolean HashAlgorithm 'get set' : 
+    Boolean Id 'get set' : 
+    Boolean IsFirstInTransaction 'get set' : 
+    Boolean IsLastInTransaction 'get set' : 
+    Boolean Label 'get set' : 
+    Boolean LookupId 'get set' : 
+    Boolean MessageType 'get set' : 
+    Boolean Priority 'get set' : 
+    Boolean Recoverable 'get set' : 
+    Boolean ResponseQueue 'get set' : 
+    Boolean SenderCertificate 'get set' : 
+    Boolean SenderId 'get set' : 
+    Boolean SenderVersion 'get set' : 
+    Boolean SentTime 'get set' : 
+    Boolean SourceMachine 'get set' : 
+    Boolean TimeToBeReceived 'get set' : 
+    Boolean TimeToReachQueue 'get set' : 
+    Boolean TransactionId 'get set' : 
+    Boolean TransactionStatusQueue 'get set' : 
+    Boolean UseAuthentication 'get set' : 
+    Boolean UseDeadLetterQueue 'get set' : 
+    Boolean UseEncryption 'get set' : 
+    Boolean UseJournalQueue 'get set' : 
+    Boolean UseTracing 'get set' : 
+  Methods:
+    get_UseEncryption(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseEncryption(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseJournalQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseJournalQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseTracing(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseTracing(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    ClearAll(): PrivateScope, Public, HideBySig
+    SetDefaults(): PrivateScope, Public, HideBySig
+    SetAll(): PrivateScope, Public, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Acknowledgment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Acknowledgment(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AcknowledgeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AcknowledgeType(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AdministrationQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_AdministrationQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AppSpecific(): PrivateScope, Public, HideBySig, SpecialName
+    set_AppSpecific(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrivedTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrivedTime(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AttachSenderId(): PrivateScope, Public, HideBySig, SpecialName
+    set_AttachSenderId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Authenticated(): PrivateScope, Public, HideBySig, SpecialName
+    set_Authenticated(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AuthenticationProviderName(): PrivateScope, Public, HideBySig, SpecialName
+    set_AuthenticationProviderName(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AuthenticationProviderType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AuthenticationProviderType(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Body(): PrivateScope, Public, HideBySig, SpecialName
+    set_Body(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ConnectorType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConnectorType(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CorrelationId(): PrivateScope, Public, HideBySig, SpecialName
+    set_CorrelationId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultBodySize(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultBodySize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultExtensionSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultExtensionSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultLabelSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultLabelSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DestinationQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_DestinationQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DestinationSymmetricKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_DestinationSymmetricKey(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DigitalSignature(): PrivateScope, Public, HideBySig, SpecialName
+    set_DigitalSignature(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EncryptionAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_EncryptionAlgorithm(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Extension(): PrivateScope, Public, HideBySig, SpecialName
+    set_Extension(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_HashAlgorithm(): PrivateScope, Public, HideBySig, SpecialName
+    set_HashAlgorithm(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFirstInTransaction(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsFirstInTransaction(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsLastInTransaction(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsLastInTransaction(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_LookupId(): PrivateScope, Public, HideBySig, SpecialName
+    set_LookupId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MessageType(): PrivateScope, Public, HideBySig, SpecialName
+    set_MessageType(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Priority(): PrivateScope, Public, HideBySig, SpecialName
+    set_Priority(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Recoverable(): PrivateScope, Public, HideBySig, SpecialName
+    set_Recoverable(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ResponseQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_ResponseQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderCertificate(): PrivateScope, Public, HideBySig, SpecialName
+    set_SenderCertificate(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderId(): PrivateScope, Public, HideBySig, SpecialName
+    set_SenderId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SenderVersion(): PrivateScope, Public, HideBySig, SpecialName
+    set_SenderVersion(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SentTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_SentTime(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceMachine(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceMachine(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToBeReceived(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToBeReceived(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeToReachQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeToReachQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TransactionId(): PrivateScope, Public, HideBySig, SpecialName
+    set_TransactionId(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TransactionStatusQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_TransactionStatusQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseAuthentication(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseAuthentication(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseDeadLetterQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseDeadLetterQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class System.Messaging.MessageQueue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Messaging.QueueAccessMode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Boolean, Boolean, System.Messaging.QueueAccessMode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.IEnumerable
+  Fields:
+    System.TimeSpan InfiniteTimeout : Public, Static, InitOnly
+    Int64 InfiniteQueueSize : Public, Static, InitOnly
+  Properties:
+    System.Messaging.QueueAccessMode AccessMode 'get ' : 
+    Boolean Authenticate 'get set' : 
+    Int16 BasePriority 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanWrite 'get ' : 
+    System.Guid Category 'get set' : 
+    System.DateTime CreateTime 'get ' : 
+    System.Messaging.DefaultPropertiesToSend DefaultPropertiesToSend 'get set' : 
+    Boolean DenySharedReceive 'get set' : 
+    Boolean EnableConnectionCache 'get set' : 
+    System.Messaging.EncryptionRequired EncryptionRequired 'get set' : 
+    System.String FormatName 'get ' : 
+    System.Messaging.IMessageFormatter Formatter 'get set' : 
+    System.Guid Id 'get ' : 
+    System.String Label 'get set' : 
+    System.DateTime LastModifyTime 'get ' : 
+    System.String MachineName 'get set' : 
+    Int64 MaximumJournalSize 'get set' : 
+    Int64 MaximumQueueSize 'get set' : 
+    System.Messaging.MessagePropertyFilter MessageReadPropertyFilter 'get set' : 
+    System.String MulticastAddress 'get set' : 
+    System.String Path 'get set' : 
+    System.String QueueName 'get set' : 
+    IntPtr ReadHandle 'get ' : 
+    System.ComponentModel.ISynchronizeInvoke SynchronizingObject 'get set' : 
+    Boolean Transactional 'get ' : 
+    Boolean UseJournalQueue 'get set' : 
+    IntPtr WriteHandle 'get ' : 
+  Events:
+    System.Messaging.PeekCompletedEventHandler PeekCompleted: 
+    System.Messaging.ReceiveCompletedEventHandler ReceiveCompleted: 
+  Methods:
+    EndReceive(IAsyncResult): PrivateScope, Public, HideBySig
+    Exists(String): PrivateScope, Public, Static, HideBySig
+    GetAllMessages(): PrivateScope, Public, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask (Obsolete)
+    GetMachineId(String): PrivateScope, Public, Static, HideBySig
+    GetSecurityContext(): PrivateScope, Public, Static, HideBySig
+    GetMessageQueueEnumerator(): PrivateScope, Public, Static, HideBySig
+    GetMessageQueueEnumerator(MessageQueueCriteria): PrivateScope, Public, Static, HideBySig
+    GetMessageEnumerator(): PrivateScope, Public, HideBySig (Obsolete)
+    GetMessageEnumerator2(): PrivateScope, Public, HideBySig
+    GetPrivateQueuesByMachine(String): PrivateScope, Public, Static, HideBySig
+    GetPublicQueues(): PrivateScope, Public, Static, HideBySig
+    GetPublicQueues(MessageQueueCriteria): PrivateScope, Public, Static, HideBySig
+    GetPublicQueuesByCategory(Guid): PrivateScope, Public, Static, HideBySig
+    GetPublicQueuesByLabel(String): PrivateScope, Public, Static, HideBySig
+    GetPublicQueuesByMachine(String): PrivateScope, Public, Static, HideBySig
+    Peek(): PrivateScope, Public, HideBySig
+    Peek(TimeSpan): PrivateScope, Public, HideBySig
+    Peek(TimeSpan, Cursor, PeekAction): PrivateScope, Public, HideBySig
+    PeekById(String): PrivateScope, Public, HideBySig
+    PeekById(String, TimeSpan): PrivateScope, Public, HideBySig
+    PeekByCorrelationId(String): PrivateScope, Public, HideBySig
+    PeekByCorrelationId(String, TimeSpan): PrivateScope, Public, HideBySig
+    Purge(): PrivateScope, Public, HideBySig
+    Receive(): PrivateScope, Public, HideBySig
+    Receive(MessageQueueTransaction): PrivateScope, Public, HideBySig
+    Receive(MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    Receive(TimeSpan): PrivateScope, Public, HideBySig
+    Receive(TimeSpan, Cursor): PrivateScope, Public, HideBySig
+    Receive(TimeSpan, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    Receive(TimeSpan, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    Receive(TimeSpan, Cursor, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    Receive(TimeSpan, Cursor, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveById(String): PrivateScope, Public, HideBySig
+    ReceiveById(String, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    ReceiveById(String, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveById(String, TimeSpan): PrivateScope, Public, HideBySig
+    ReceiveById(String, TimeSpan, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    ReceiveById(String, TimeSpan, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String, TimeSpan): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String, TimeSpan, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    ReceiveByCorrelationId(String, TimeSpan, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveByLookupId(Int64): PrivateScope, Public, HideBySig
+    ReceiveByLookupId(MessageLookupAction, Int64, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ReceiveByLookupId(MessageLookupAction, Int64, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    PeekByLookupId(Int64): PrivateScope, Public, HideBySig
+    PeekByLookupId(MessageLookupAction, Int64): PrivateScope, Public, HideBySig
+    Refresh(): PrivateScope, Public, HideBySig
+    Send(Object): PrivateScope, Public, HideBySig
+    Send(Object, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    Send(Object, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    Send(Object, String): PrivateScope, Public, HideBySig
+    Send(Object, String, MessageQueueTransaction): PrivateScope, Public, HideBySig
+    Send(Object, String, MessageQueueTransactionType): PrivateScope, Public, HideBySig
+    ResetPermissions(): PrivateScope, Public, HideBySig
+    SetPermissions(String, MessageQueueAccessRights): PrivateScope, Public, HideBySig
+    SetPermissions(String, MessageQueueAccessRights, AccessControlEntryType): PrivateScope, Public, HideBySig
+    SetPermissions(MessageQueueAccessControlEntry): PrivateScope, Public, HideBySig
+    SetPermissions(AccessControlList): PrivateScope, Public, HideBySig
+    get_AccessMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_Authenticate(): PrivateScope, Public, HideBySig, SpecialName
+    set_Authenticate(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BasePriority(): PrivateScope, Public, HideBySig, SpecialName
+    set_BasePriority(Int16): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, HideBySig, SpecialName
+    get_Category(): PrivateScope, Public, HideBySig, SpecialName
+    set_Category(Guid): PrivateScope, Public, HideBySig, SpecialName
+    get_CreateTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultPropertiesToSend(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultPropertiesToSend(DefaultPropertiesToSend): PrivateScope, Public, HideBySig, SpecialName
+    get_DenySharedReceive(): PrivateScope, Public, HideBySig, SpecialName
+    set_DenySharedReceive(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableConnectionCache(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_EnableConnectionCache(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_EncryptionRequired(): PrivateScope, Public, HideBySig, SpecialName
+    set_EncryptionRequired(EncryptionRequired): PrivateScope, Public, HideBySig, SpecialName
+    get_FormatName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Formatter(): PrivateScope, Public, HideBySig, SpecialName
+    set_Formatter(IMessageFormatter): PrivateScope, Public, HideBySig, SpecialName
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LastModifyTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_MachineName(): PrivateScope, Public, HideBySig, SpecialName
+    set_MachineName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumJournalSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumJournalSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumQueueSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumQueueSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MessageReadPropertyFilter(): PrivateScope, Public, HideBySig, SpecialName
+    set_MessageReadPropertyFilter(MessagePropertyFilter): PrivateScope, Public, HideBySig, SpecialName
+    get_MulticastAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_MulticastAddress(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_QueueName(): PrivateScope, Public, HideBySig, SpecialName
+    set_QueueName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ReadHandle(): PrivateScope, Public, HideBySig, SpecialName
+    get_SynchronizingObject(): PrivateScope, Public, HideBySig, SpecialName
+    set_SynchronizingObject(ISynchronizeInvoke): PrivateScope, Public, HideBySig, SpecialName
+    get_Transactional(): PrivateScope, Public, HideBySig, SpecialName
+    get_UseJournalQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseJournalQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_WriteHandle(): PrivateScope, Public, HideBySig, SpecialName
+    add_PeekCompleted(PeekCompletedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PeekCompleted(PeekCompletedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ReceiveCompleted(ReceiveCompletedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ReceiveCompleted(ReceiveCompletedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    BeginPeek(): PrivateScope, Public, HideBySig
+    BeginPeek(TimeSpan): PrivateScope, Public, HideBySig
+    BeginPeek(TimeSpan, Object): PrivateScope, Public, HideBySig
+    BeginPeek(TimeSpan, Object, AsyncCallback): PrivateScope, Public, HideBySig
+    BeginPeek(TimeSpan, Cursor, PeekAction, Object, AsyncCallback): PrivateScope, Public, HideBySig
+    BeginReceive(): PrivateScope, Public, HideBySig
+    BeginReceive(TimeSpan): PrivateScope, Public, HideBySig
+    BeginReceive(TimeSpan, Object): PrivateScope, Public, HideBySig
+    BeginReceive(TimeSpan, Object, AsyncCallback): PrivateScope, Public, HideBySig
+    BeginReceive(TimeSpan, Cursor, Object, AsyncCallback): PrivateScope, Public, HideBySig
+    ClearConnectionCache(): PrivateScope, Public, Static, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    Create(String): PrivateScope, Public, Static, HideBySig
+    Create(String, Boolean): PrivateScope, Public, Static, HideBySig
+    CreateCursor(): PrivateScope, Public, HideBySig
+    Delete(String): PrivateScope, Public, Static, HideBySig
+    EndPeek(IAsyncResult): PrivateScope, Public, HideBySig
+Class System.Messaging.MessageQueueAccessControlEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Messaging.AccessControlEntry
+    Void .ctor(System.Messaging.Trustee, System.Messaging.MessageQueueAccessRights): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.Trustee, System.Messaging.MessageQueueAccessRights, System.Messaging.AccessControlEntryType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Messaging.MessageQueueAccessRights MessageQueueAccessRights 'get set' : 
+  Methods:
+    get_MessageQueueAccessRights(): PrivateScope, Public, HideBySig, SpecialName
+    set_MessageQueueAccessRights(MessageQueueAccessRights): PrivateScope, Public, HideBySig, SpecialName
+Struct System.Messaging.MessageQueueAccessRights: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageQueueAccessRights DeleteMessage = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights PeekMessage = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights WriteMessage = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights DeleteJournalMessage = 8 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights SetQueueProperties = 16 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights GetQueueProperties = 32 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights DeleteQueue = 65536 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights GetQueuePermissions = 131072 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights ChangeQueuePermissions = 262144 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights TakeQueueOwnership = 524288 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights ReceiveMessage = 3 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights ReceiveJournalMessage = 10 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights GenericRead = 131115 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights GenericWrite = 131108 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueAccessRights FullControl = 983103 : Public, Static, Literal, HasDefault
+Class System.Messaging.MessageQueueCriteria: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime CreatedAfter 'get set' : 
+    System.DateTime CreatedBefore 'get set' : 
+    System.String Label 'get set' : 
+    System.String MachineName 'get set' : 
+    System.DateTime ModifiedAfter 'get set' : 
+    System.DateTime ModifiedBefore 'get set' : 
+    System.Guid Category 'get set' : 
+  Methods:
+    get_CreatedAfter(): PrivateScope, Public, HideBySig, SpecialName
+    set_CreatedAfter(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_CreatedBefore(): PrivateScope, Public, HideBySig, SpecialName
+    set_CreatedBefore(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MachineName(): PrivateScope, Public, HideBySig, SpecialName
+    set_MachineName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ModifiedAfter(): PrivateScope, Public, HideBySig, SpecialName
+    set_ModifiedAfter(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_ModifiedBefore(): PrivateScope, Public, HideBySig, SpecialName
+    set_ModifiedBefore(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Category(): PrivateScope, Public, HideBySig, SpecialName
+    set_Category(Guid): PrivateScope, Public, HideBySig, SpecialName
+    ClearAll(): PrivateScope, Public, HideBySig
+Class System.Messaging.MessageQueueEnumerator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.MarshalByRefObject
+  Interfaces:
+    System.Collections.IEnumerator
+    System.IDisposable
+  Properties:
+    System.Messaging.MessageQueue Current 'get ' : 
+    IntPtr LocatorHandle 'get ' : 
+  Methods:
+    get_Current(): PrivateScope, Public, HideBySig, SpecialName
+    Close(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_LocatorHandle(): PrivateScope, Public, HideBySig, SpecialName
+    MoveNext(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.MessageQueueErrorCode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageQueueErrorCode Base = -1072824320 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode Generic = -1072824319 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode Property = -1072824318 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode QueueNotFound = -1072824317 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode QueueExists = -1072824315 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InvalidParameter = -1072824314 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InvalidHandle = -1072824313 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode OperationCanceled = -1072824312 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SharingViolation = -1072824311 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode ServiceNotAvailable = -1072824309 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MachineNotFound = -1072824307 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalSort = -1072824304 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalUser = -1072824303 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoDs = -1072824301 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalQueuePathName = -1072824300 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalPropertyValue = -1072824296 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalPropertyVt = -1072824295 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode BufferOverflow = -1072824294 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IOTimeout = -1072824293 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalCursorAction = -1072824292 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MessageAlreadyReceived = -1072824291 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalFormatName = -1072824290 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode FormatNameBufferTooSmall = -1072824289 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode UnsupportedFormatNameOperation = -1072824288 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalSecurityDescriptor = -1072824287 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SenderIdBufferTooSmall = -1072824286 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SecurityDescriptorBufferTooSmall = -1072824285 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotImpersonateClient = -1072824284 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode AccessDenied = -1072824283 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode PrivilegeNotHeld = -1072824282 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InsufficientResources = -1072824281 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode UserBufferTooSmall = -1072824280 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MessageStorageFailed = -1072824278 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SenderCertificateBufferTooSmall = -1072824277 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InvalidCertificate = -1072824276 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CorruptedInternalCertificate = -1072824275 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoInternalUserCertificate = -1072824273 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CorruptedSecurityData = -1072824272 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CorruptedPersonalCertStore = -1072824271 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode ComputerDoesNotSupportEncryption = -1072824269 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode BadSecurityContext = -1072824267 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CouldNotGetUserSid = -1072824266 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CouldNotGetAccountInfo = -1072824265 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalCriteriaColumns = -1072824264 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalPropertyId = -1072824263 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalRelation = -1072824262 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalPropertySize = -1072824261 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalRestrictionPropertyId = -1072824260 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalQueueProperties = -1072824259 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode PropertyNotAllowed = -1072824258 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InsufficientProperties = -1072824257 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MachineExists = -1072824256 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalMessageProperties = -1072824255 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode DsIsFull = -1072824254 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode DsError = -1072824253 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode InvalidOwner = -1072824252 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode UnsupportedAccessMode = -1072824251 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode ResultBufferTooSmall = -1072824250 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode DeleteConnectedNetworkInUse = -1072824248 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoResponseFromObjectServer = -1072824247 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode ObjectServerNotAvailable = -1072824246 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode QueueNotAvailable = -1072824245 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode DtcConnect = -1072824244 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode TransactionImport = -1072824242 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode TransactionUsage = -1072824240 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode TransactionSequence = -1072824239 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MissingConnectorType = -1072824235 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode StaleHandle = -1072824234 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode TransactionEnlist = -1072824232 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode QueueDeleted = -1072824230 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalContext = -1072824229 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalSortPropertyId = -1072824228 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode LabelBufferTooSmall = -1072824226 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MqisServerEmpty = -1072824225 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MqisReadOnlyMode = -1072824224 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SymmetricKeyBufferTooSmall = -1072824223 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode SignatureBufferTooSmall = -1072824222 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode ProviderNameBufferTooSmall = -1072824221 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalOperation = -1072824220 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode WriteNotAllowed = -1072824219 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode WksCantServeClient = -1072824218 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode DependentClientLicenseOverflow = -1072824217 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CorruptedQueueWasDeleted = -1072824216 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode RemoteMachineNotAvailable = -1072824215 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode UnsupportedOperation = -1072824214 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode EncryptionProviderNotSupported = -1072824213 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotSetCryptographicSecurityDescriptor = -1072824212 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CertificateNotProvided = -1072824211 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode QDnsPropertyNotSupported = -1072824210 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotCreateCertificateStore = -1072824209 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotOpenCertificateStore = -1072824208 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalEnterpriseOperation = -1072824207 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotGrantAddGuid = -1072824206 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotLoadMsmqOcm = -1072824205 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoEntryPointMsmqOcm = -1072824204 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoMsmqServersOnDc = -1072824203 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotJoinDomain = -1072824202 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotCreateOnGlobalCatalog = -1072824201 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode GuidNotMatching = -1072824200 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode PublicKeyNotFound = -1072824199 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode PublicKeyDoesNotExist = -1072824198 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode IllegalPrivateProperties = -1072824197 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoGlobalCatalogInDomain = -1072824196 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode NoMsmqServersOnGlobalCatalog = -1072824195 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotGetDistinguishedName = -1072824194 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotHashDataEx = -1072824193 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotSignDataEx = -1072824192 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode CannotCreateHashEx = -1072824191 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode FailVerifySignatureEx = -1072824190 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueErrorCode MessageNotFound = -1072824184 : Public, Static, Literal, HasDefault
+Class System.Messaging.MessageQueueException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Runtime.InteropServices.ExternalException
+  Properties:
+    System.Messaging.MessageQueueErrorCode MessageQueueErrorCode 'get ' : 
+    System.String Message 'get ' : 
+  Methods:
+    get_MessageQueueErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.Messaging.MessageQueueInstaller: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Configuration.Install.ComponentInstaller
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.MessageQueue): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Authenticate 'get set' : 
+    Int16 BasePriority 'get set' : 
+    System.Guid Category 'get set' : 
+    System.Messaging.EncryptionRequired EncryptionRequired 'get set' : 
+    System.String Label 'get set' : 
+    Int64 MaximumJournalSize 'get set' : 
+    Int64 MaximumQueueSize 'get set' : 
+    System.String MulticastAddress 'get set' : 
+    System.String Path 'get set' : 
+    System.Messaging.AccessControlList Permissions 'get set' : 
+    Boolean Transactional 'get set' : 
+    System.Configuration.Install.UninstallAction UninstallAction 'get set' : 
+    Boolean UseJournalQueue 'get set' : 
+  Methods:
+    get_Authenticate(): PrivateScope, Public, HideBySig, SpecialName
+    set_Authenticate(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BasePriority(): PrivateScope, Public, HideBySig, SpecialName
+    set_BasePriority(Int16): PrivateScope, Public, HideBySig, SpecialName
+    get_Category(): PrivateScope, Public, HideBySig, SpecialName
+    set_Category(Guid): PrivateScope, Public, HideBySig, SpecialName
+    get_EncryptionRequired(): PrivateScope, Public, HideBySig, SpecialName
+    set_EncryptionRequired(EncryptionRequired): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumJournalSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumJournalSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumQueueSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumQueueSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MulticastAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_MulticastAddress(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Permissions(): PrivateScope, Public, HideBySig, SpecialName
+    set_Permissions(AccessControlList): PrivateScope, Public, HideBySig, SpecialName
+    get_Transactional(): PrivateScope, Public, HideBySig, SpecialName
+    set_Transactional(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UninstallAction(): PrivateScope, Public, HideBySig, SpecialName
+    set_UninstallAction(UninstallAction): PrivateScope, Public, HideBySig, SpecialName
+    get_UseJournalQueue(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseJournalQueue(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Commit(IDictionary): PrivateScope, Public, Virtual, HideBySig
+    CopyFromComponent(IComponent): PrivateScope, Public, Virtual, HideBySig
+    Install(IDictionary): PrivateScope, Public, Virtual, HideBySig
+    IsEquivalentInstaller(ComponentInstaller): PrivateScope, Public, Virtual, HideBySig
+    Rollback(IDictionary): PrivateScope, Public, Virtual, HideBySig
+    Uninstall(IDictionary): PrivateScope, Public, Virtual, HideBySig
+Class System.Messaging.MessageQueuePermission: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit
+  :System.Security.CodeAccessPermission
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Permissions.PermissionState): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.MessageQueuePermissionAccess, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.MessageQueuePermissionAccess, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.MessageQueuePermissionEntry[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Security.Permissions.IUnrestrictedPermission
+  Properties:
+    System.Messaging.MessageQueuePermissionEntryCollection PermissionEntries 'get ' : 
+  Methods:
+    get_PermissionEntries(): PrivateScope, Public, HideBySig, SpecialName
+    Copy(): PrivateScope, Public, Virtual, HideBySig
+    FromXml(SecurityElement): PrivateScope, Public, Virtual, HideBySig
+    Intersect(IPermission): PrivateScope, Public, Virtual, HideBySig
+    IsSubsetOf(IPermission): PrivateScope, Public, Virtual, HideBySig
+    IsUnrestricted(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToXml(): PrivateScope, Public, Virtual, HideBySig
+    Union(IPermission): PrivateScope, Public, Virtual, HideBySig
+Struct System.Messaging.MessageQueuePermissionAccess: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageQueuePermissionAccess None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueuePermissionAccess Browse = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueuePermissionAccess Send = 6 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueuePermissionAccess Peek = 10 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueuePermissionAccess Receive = 26 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueuePermissionAccess Administer = 62 : Public, Static, Literal, HasDefault
+Class System.Messaging.MessageQueuePermissionAttribute: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Security.Permissions.CodeAccessSecurityAttribute
+    Void .ctor(System.Security.Permissions.SecurityAction): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Category 'get set' : 
+    System.String Label 'get set' : 
+    System.String MachineName 'get set' : 
+    System.String Path 'get set' : 
+    System.Messaging.MessageQueuePermissionAccess PermissionAccess 'get set' : 
+  Methods:
+    get_Category(): PrivateScope, Public, HideBySig, SpecialName
+    set_Category(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MachineName(): PrivateScope, Public, HideBySig, SpecialName
+    set_MachineName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PermissionAccess(): PrivateScope, Public, HideBySig, SpecialName
+    set_PermissionAccess(MessageQueuePermissionAccess): PrivateScope, Public, HideBySig, SpecialName
+    CreatePermission(): PrivateScope, Public, Virtual, HideBySig
+Class System.Messaging.MessageQueuePermissionEntry: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(System.Messaging.MessageQueuePermissionAccess, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Messaging.MessageQueuePermissionAccess, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Category 'get ' : 
+    System.String Label 'get ' : 
+    System.String MachineName 'get ' : 
+    System.String Path 'get ' : 
+    System.Messaging.MessageQueuePermissionAccess PermissionAccess 'get ' : 
+  Methods:
+    get_Category(): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    get_MachineName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    get_PermissionAccess(): PrivateScope, Public, HideBySig, SpecialName
+Class System.Messaging.MessageQueuePermissionEntryCollection: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.Messaging.MessageQueuePermissionEntry Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, MessageQueuePermissionEntry): PrivateScope, Public, HideBySig, SpecialName
+    Add(MessageQueuePermissionEntry): PrivateScope, Public, HideBySig
+    AddRange(MessageQueuePermissionEntry[]): PrivateScope, Public, HideBySig
+    AddRange(MessageQueuePermissionEntryCollection): PrivateScope, Public, HideBySig
+    Contains(MessageQueuePermissionEntry): PrivateScope, Public, HideBySig
+    CopyTo(MessageQueuePermissionEntry[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(MessageQueuePermissionEntry): PrivateScope, Public, HideBySig
+    Insert(Int32, MessageQueuePermissionEntry): PrivateScope, Public, HideBySig
+    Remove(MessageQueuePermissionEntry): PrivateScope, Public, HideBySig
+Class System.Messaging.MessageQueueTransaction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Messaging.MessageQueueTransactionStatus Status 'get ' : 
+  Methods:
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    Abort(): PrivateScope, Public, HideBySig
+    Begin(): PrivateScope, Public, HideBySig
+    Commit(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.MessageQueueTransactionStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageQueueTransactionStatus Aborted = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueTransactionStatus Committed = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueTransactionStatus Initialized = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueTransactionStatus Pending = 3 : Public, Static, Literal, HasDefault
+Struct System.Messaging.MessageQueueTransactionType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageQueueTransactionType None = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueTransactionType Automatic = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageQueueTransactionType Single = 3 : Public, Static, Literal, HasDefault
+Struct System.Messaging.MessageType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.MessageType Acknowledgment = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageType Normal = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.MessageType Report = 3 : Public, Static, Literal, HasDefault
+Class System.Messaging.MessagingDescriptionAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.DescriptionAttribute
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Description 'get ' : 
+  Methods:
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+Struct System.Messaging.PeekAction: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.PeekAction Current = -2147483648 : Public, Static, Literal, HasDefault
+    System.Messaging.PeekAction Next = -2147483647 : Public, Static, Literal, HasDefault
+Class System.Messaging.PeekCompletedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+  Properties:
+    System.IAsyncResult AsyncResult 'get set' : 
+    System.Messaging.Message Message 'get ' : 
+  Methods:
+    get_AsyncResult(): PrivateScope, Public, HideBySig, SpecialName
+    set_AsyncResult(IAsyncResult): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, HideBySig, SpecialName
+Class System.Messaging.PeekCompletedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, PeekCompletedEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, PeekCompletedEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.QueueAccessMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.QueueAccessMode Send = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.QueueAccessMode Peek = 32 : Public, Static, Literal, HasDefault
+    System.Messaging.QueueAccessMode Receive = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.QueueAccessMode PeekAndAdmin = 160 : Public, Static, Literal, HasDefault
+    System.Messaging.QueueAccessMode ReceiveAndAdmin = 129 : Public, Static, Literal, HasDefault
+    System.Messaging.QueueAccessMode SendAndReceive = 3 : Public, Static, Literal, HasDefault
+Class System.Messaging.ReceiveCompletedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+  Properties:
+    System.IAsyncResult AsyncResult 'get set' : 
+    System.Messaging.Message Message 'get ' : 
+  Methods:
+    get_AsyncResult(): PrivateScope, Public, HideBySig, SpecialName
+    set_AsyncResult(IAsyncResult): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, HideBySig, SpecialName
+Class System.Messaging.ReceiveCompletedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ReceiveCompletedEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ReceiveCompletedEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class System.Messaging.SecurityContext: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct System.Messaging.StandardAccessRights: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.StandardAccessRights Delete = 65536 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights ReadSecurity = 131072 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights WriteSecurity = 262144 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights Synchronize = 1048576 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights ModifyOwner = 524288 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights Read = 131072 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights Write = 131072 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights Execute = 131072 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights Required = 851968 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights All = 2031616 : Public, Static, Literal, HasDefault
+    System.Messaging.StandardAccessRights None = 0 : Public, Static, Literal, HasDefault
+Class System.Messaging.Trustee: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String, System.Messaging.TrusteeType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get set' : 
+    System.String SystemName 'get set' : 
+    System.Messaging.TrusteeType TrusteeType 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_SystemName(): PrivateScope, Public, HideBySig, SpecialName
+    set_SystemName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_TrusteeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_TrusteeType(TrusteeType): PrivateScope, Public, HideBySig, SpecialName
+Struct System.Messaging.TrusteeType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.Messaging.TrusteeType Unknown = 0 : Public, Static, Literal, HasDefault
+    System.Messaging.TrusteeType User = 1 : Public, Static, Literal, HasDefault
+    System.Messaging.TrusteeType Group = 2 : Public, Static, Literal, HasDefault
+    System.Messaging.TrusteeType Domain = 3 : Public, Static, Literal, HasDefault
+    System.Messaging.TrusteeType Alias = 4 : Public, Static, Literal, HasDefault
+    System.Messaging.TrusteeType Computer = 5 : Public, Static, Literal, HasDefault
+Class System.Messaging.XmlMessageFormatter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Type[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Messaging.IMessageFormatter
+    System.ICloneable
+  Properties:
+    System.String[] TargetTypeNames 'get set' : 
+    System.Type[] TargetTypes 'get set' : 
+  Methods:
+    get_TargetTypeNames(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetTypeNames(String[]): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetTypes(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetTypes(Type[]): PrivateScope, Public, HideBySig, SpecialName
+    CanRead(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Read(Message): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Write(Message, Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.Messaging.Design.QueuePathDialog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.IServiceProvider): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Design.IUIService): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Path 'get ' : 
+  Methods:
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    ChoosePath(): PrivateScope, Public, HideBySig
+    DoubleClicked(Object, EventArgs): PrivateScope, Public, HideBySig
+    SelectQueue(MessageQueue): PrivateScope, Public, HideBySig
+Class System.Messaging.Design.QueuePathEditor: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.Drawing.Design.UITypeEditor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    EditValue(ITypeDescriptorContext, IServiceProvider, Object): PrivateScope, Public, Virtual, HideBySig
+    GetEditStyle(ITypeDescriptorContext): PrivateScope, Public, Virtual, HideBySig
