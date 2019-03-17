@@ -317,9 +317,9 @@ using namespace SeePage;
 	} 
 	else 
 		MessageBox::Show(L"Блок запросов пусто. Ничего не выполнено.", 
-		"Ошибка выполнения запроса",
-		MessageBoxButtons::OK,
-		MessageBoxIcon::Exclamation);
+						  "Ошибка выполнения запроса",
+						  MessageBoxButtons ::OK,
+						  MessageBoxIcon	::Exclamation);
 }
 	//git fix
 	/*MessageBox::Show(L"Ошибка синтаксиса.", 
