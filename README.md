@@ -4,3 +4,4 @@ global refactoring in dbm
 15.03.2019 CHANGE
 Git fix two
 17.03.2019 CHANGE
+Modified UI, addition new tab in RelationThread menu

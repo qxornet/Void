@@ -34,6 +34,10 @@ static		    bool			dbc_flag,
 
 static		   OleDbConnection^ connect;
 	private: System::Windows::Forms::SplitContainer^  splitContainer1;
+	private: System::Windows::Forms::TabPage^  tabPage8;
+	private: System::Windows::Forms::DataGridView^  dataGridView4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column16;
+
 
 			 static		   OleDbCommand^	command;
 
@@ -220,60 +224,60 @@ private:
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::ListViewGroup^  listViewGroup1 = (gcnew System::Windows::Forms::ListViewGroup(L"Viewers", System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(5) {L"Empty viewer", 
+			System::Windows::Forms::ListViewGroup^  listViewGroup8 = (gcnew System::Windows::Forms::ListViewGroup(L"Viewers", System::Windows::Forms::HorizontalAlignment::Center));
+			System::Windows::Forms::ListViewItem^  listViewItem40 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(5) {L"Empty viewer", 
 				L"123", L"121233", L"123132", L"444125567"}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(L"Base viewer"));
-			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(L"Dynamic viewer"));
-			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(L"Viewer with addition settings"));
-			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(L"Dedicated viewer"));
+			System::Windows::Forms::ListViewItem^  listViewItem41 = (gcnew System::Windows::Forms::ListViewItem(L"Base viewer"));
+			System::Windows::Forms::ListViewItem^  listViewItem42 = (gcnew System::Windows::Forms::ListViewItem(L"Dynamic viewer"));
+			System::Windows::Forms::ListViewItem^  listViewItem43 = (gcnew System::Windows::Forms::ListViewItem(L"Viewer with addition settings"));
+			System::Windows::Forms::ListViewItem^  listViewItem44 = (gcnew System::Windows::Forms::ListViewItem(L"Dedicated viewer"));
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(database_manager::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::ListViewGroup^  listViewGroup2 = (gcnew System::Windows::Forms::ListViewGroup(L"Стандартные", System::Windows::Forms::HorizontalAlignment::Left));
-			System::Windows::Forms::ListViewGroup^  listViewGroup3 = (gcnew System::Windows::Forms::ListViewGroup(L"Математические функции", 
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::ListViewGroup^  listViewGroup9 = (gcnew System::Windows::Forms::ListViewGroup(L"Стандартные", System::Windows::Forms::HorizontalAlignment::Left));
+			System::Windows::Forms::ListViewGroup^  listViewGroup10 = (gcnew System::Windows::Forms::ListViewGroup(L"Математические функции", 
 				System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewGroup^  listViewGroup4 = (gcnew System::Windows::Forms::ListViewGroup(L"Строковые функции", System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewGroup^  listViewGroup5 = (gcnew System::Windows::Forms::ListViewGroup(L"Стандартные функции", System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewGroup^  listViewGroup6 = (gcnew System::Windows::Forms::ListViewGroup(L"Функции датировок", System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewGroup^  listViewGroup7 = (gcnew System::Windows::Forms::ListViewGroup(L"Функции преобразования", 
+			System::Windows::Forms::ListViewGroup^  listViewGroup11 = (gcnew System::Windows::Forms::ListViewGroup(L"Строковые функции", System::Windows::Forms::HorizontalAlignment::Center));
+			System::Windows::Forms::ListViewGroup^  listViewGroup12 = (gcnew System::Windows::Forms::ListViewGroup(L"Стандартные функции", System::Windows::Forms::HorizontalAlignment::Center));
+			System::Windows::Forms::ListViewGroup^  listViewGroup13 = (gcnew System::Windows::Forms::ListViewGroup(L"Функции датировок", System::Windows::Forms::HorizontalAlignment::Center));
+			System::Windows::Forms::ListViewGroup^  listViewGroup14 = (gcnew System::Windows::Forms::ListViewGroup(L"Функции преобразования", 
 				System::Windows::Forms::HorizontalAlignment::Center));
-			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(1) {L"ABS"}, 
+			System::Windows::Forms::ListViewItem^  listViewItem45 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(1) {L"ABS"}, 
 				-1, System::Drawing::Color::Empty, System::Drawing::Color::Transparent, nullptr));
-			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(L"Round"));
-			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(L"SIGN"));
-			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(L"POWER"));
-			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(L"SQRT"));
-			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(L"CEILING"));
-			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(L"-FLOOR"));
-			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(L"ASCII"));
-			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(L"CHAR"));
-			System::Windows::Forms::ListViewItem^  listViewItem15 = (gcnew System::Windows::Forms::ListViewItem(L"LEN"));
-			System::Windows::Forms::ListViewItem^  listViewItem16 = (gcnew System::Windows::Forms::ListViewItem(L"LTRIM"));
-			System::Windows::Forms::ListViewItem^  listViewItem17 = (gcnew System::Windows::Forms::ListViewItem(L"RTRIM"));
-			System::Windows::Forms::ListViewItem^  listViewItem18 = (gcnew System::Windows::Forms::ListViewItem(L"LEFT"));
-			System::Windows::Forms::ListViewItem^  listViewItem19 = (gcnew System::Windows::Forms::ListViewItem(L"RIGHT"));
-			System::Windows::Forms::ListViewItem^  listViewItem20 = (gcnew System::Windows::Forms::ListViewItem(L"SUBSTRING"));
-			System::Windows::Forms::ListViewItem^  listViewItem21 = (gcnew System::Windows::Forms::ListViewItem(L"LOWER"));
-			System::Windows::Forms::ListViewItem^  listViewItem22 = (gcnew System::Windows::Forms::ListViewItem(L"UPPER"));
-			System::Windows::Forms::ListViewItem^  listViewItem23 = (gcnew System::Windows::Forms::ListViewItem(L"GETDATE"));
-			System::Windows::Forms::ListViewItem^  listViewItem24 = (gcnew System::Windows::Forms::ListViewItem(L"DAY"));
-			System::Windows::Forms::ListViewItem^  listViewItem25 = (gcnew System::Windows::Forms::ListViewItem(L"MONTH"));
-			System::Windows::Forms::ListViewItem^  listViewItem26 = (gcnew System::Windows::Forms::ListViewItem(L"YEAR"));
-			System::Windows::Forms::ListViewItem^  listViewItem27 = (gcnew System::Windows::Forms::ListViewItem(L"DATENANE"));
-			System::Windows::Forms::ListViewItem^  listViewItem28 = (gcnew System::Windows::Forms::ListViewItem(L"DATEPART"));
-			System::Windows::Forms::ListViewItem^  listViewItem29 = (gcnew System::Windows::Forms::ListViewItem(L"CAST"));
-			System::Windows::Forms::ListViewItem^  listViewItem30 = (gcnew System::Windows::Forms::ListViewItem(L"CONVERT"));
-			System::Windows::Forms::ListViewItem^  listViewItem31 = (gcnew System::Windows::Forms::ListViewItem(L"SET"));
-			System::Windows::Forms::ListViewItem^  listViewItem32 = (gcnew System::Windows::Forms::ListViewItem(L"GO"));
-			System::Windows::Forms::ListViewItem^  listViewItem33 = (gcnew System::Windows::Forms::ListViewItem(L"DECLARE"));
-			System::Windows::Forms::ListViewItem^  listViewItem34 = (gcnew System::Windows::Forms::ListViewItem(L"USE"));
-			System::Windows::Forms::ListViewItem^  listViewItem35 = (gcnew System::Windows::Forms::ListViewItem(L"SELECT"));
-			System::Windows::Forms::ListViewItem^  listViewItem36 = (gcnew System::Windows::Forms::ListViewItem(L"FROM"));
-			System::Windows::Forms::ListViewItem^  listViewItem37 = (gcnew System::Windows::Forms::ListViewItem(L"WHERE"));
-			System::Windows::Forms::ListViewItem^  listViewItem38 = (gcnew System::Windows::Forms::ListViewItem(L"INNER"));
-			System::Windows::Forms::ListViewItem^  listViewItem39 = (gcnew System::Windows::Forms::ListViewItem(L"ON"));
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::ListViewItem^  listViewItem46 = (gcnew System::Windows::Forms::ListViewItem(L"Round"));
+			System::Windows::Forms::ListViewItem^  listViewItem47 = (gcnew System::Windows::Forms::ListViewItem(L"SIGN"));
+			System::Windows::Forms::ListViewItem^  listViewItem48 = (gcnew System::Windows::Forms::ListViewItem(L"POWER"));
+			System::Windows::Forms::ListViewItem^  listViewItem49 = (gcnew System::Windows::Forms::ListViewItem(L"SQRT"));
+			System::Windows::Forms::ListViewItem^  listViewItem50 = (gcnew System::Windows::Forms::ListViewItem(L"CEILING"));
+			System::Windows::Forms::ListViewItem^  listViewItem51 = (gcnew System::Windows::Forms::ListViewItem(L"-FLOOR"));
+			System::Windows::Forms::ListViewItem^  listViewItem52 = (gcnew System::Windows::Forms::ListViewItem(L"ASCII"));
+			System::Windows::Forms::ListViewItem^  listViewItem53 = (gcnew System::Windows::Forms::ListViewItem(L"CHAR"));
+			System::Windows::Forms::ListViewItem^  listViewItem54 = (gcnew System::Windows::Forms::ListViewItem(L"LEN"));
+			System::Windows::Forms::ListViewItem^  listViewItem55 = (gcnew System::Windows::Forms::ListViewItem(L"LTRIM"));
+			System::Windows::Forms::ListViewItem^  listViewItem56 = (gcnew System::Windows::Forms::ListViewItem(L"RTRIM"));
+			System::Windows::Forms::ListViewItem^  listViewItem57 = (gcnew System::Windows::Forms::ListViewItem(L"LEFT"));
+			System::Windows::Forms::ListViewItem^  listViewItem58 = (gcnew System::Windows::Forms::ListViewItem(L"RIGHT"));
+			System::Windows::Forms::ListViewItem^  listViewItem59 = (gcnew System::Windows::Forms::ListViewItem(L"SUBSTRING"));
+			System::Windows::Forms::ListViewItem^  listViewItem60 = (gcnew System::Windows::Forms::ListViewItem(L"LOWER"));
+			System::Windows::Forms::ListViewItem^  listViewItem61 = (gcnew System::Windows::Forms::ListViewItem(L"UPPER"));
+			System::Windows::Forms::ListViewItem^  listViewItem62 = (gcnew System::Windows::Forms::ListViewItem(L"GETDATE"));
+			System::Windows::Forms::ListViewItem^  listViewItem63 = (gcnew System::Windows::Forms::ListViewItem(L"DAY"));
+			System::Windows::Forms::ListViewItem^  listViewItem64 = (gcnew System::Windows::Forms::ListViewItem(L"MONTH"));
+			System::Windows::Forms::ListViewItem^  listViewItem65 = (gcnew System::Windows::Forms::ListViewItem(L"YEAR"));
+			System::Windows::Forms::ListViewItem^  listViewItem66 = (gcnew System::Windows::Forms::ListViewItem(L"DATENANE"));
+			System::Windows::Forms::ListViewItem^  listViewItem67 = (gcnew System::Windows::Forms::ListViewItem(L"DATEPART"));
+			System::Windows::Forms::ListViewItem^  listViewItem68 = (gcnew System::Windows::Forms::ListViewItem(L"CAST"));
+			System::Windows::Forms::ListViewItem^  listViewItem69 = (gcnew System::Windows::Forms::ListViewItem(L"CONVERT"));
+			System::Windows::Forms::ListViewItem^  listViewItem70 = (gcnew System::Windows::Forms::ListViewItem(L"SET"));
+			System::Windows::Forms::ListViewItem^  listViewItem71 = (gcnew System::Windows::Forms::ListViewItem(L"GO"));
+			System::Windows::Forms::ListViewItem^  listViewItem72 = (gcnew System::Windows::Forms::ListViewItem(L"DECLARE"));
+			System::Windows::Forms::ListViewItem^  listViewItem73 = (gcnew System::Windows::Forms::ListViewItem(L"USE"));
+			System::Windows::Forms::ListViewItem^  listViewItem74 = (gcnew System::Windows::Forms::ListViewItem(L"SELECT"));
+			System::Windows::Forms::ListViewItem^  listViewItem75 = (gcnew System::Windows::Forms::ListViewItem(L"FROM"));
+			System::Windows::Forms::ListViewItem^  listViewItem76 = (gcnew System::Windows::Forms::ListViewItem(L"WHERE"));
+			System::Windows::Forms::ListViewItem^  listViewItem77 = (gcnew System::Windows::Forms::ListViewItem(L"INNER"));
+			System::Windows::Forms::ListViewItem^  listViewItem78 = (gcnew System::Windows::Forms::ListViewItem(L"ON"));
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
@@ -428,6 +432,9 @@ private:
 			this->оПрограммеToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->tabPage8 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column16 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->fastColoredTextBox1))->BeginInit();
@@ -451,6 +458,8 @@ private:
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
+			this->tabPage8->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView4))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// listView1
@@ -458,24 +467,24 @@ private:
 			this->listView1->Activation = System::Windows::Forms::ItemActivation::OneClick;
 			this->listView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->listView1->Dock = System::Windows::Forms::DockStyle::Fill;
-			listViewGroup1->Header = L"Viewers";
-			listViewGroup1->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup1->Name = L"Flowgraphs";
-			this->listView1->Groups->AddRange(gcnew cli::array< System::Windows::Forms::ListViewGroup^  >(1) {listViewGroup1});
+			listViewGroup8->Header = L"Viewers";
+			listViewGroup8->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup8->Name = L"Flowgraphs";
+			this->listView1->Groups->AddRange(gcnew cli::array< System::Windows::Forms::ListViewGroup^  >(1) {listViewGroup8});
 			this->listView1->HeaderStyle = System::Windows::Forms::ColumnHeaderStyle::Nonclickable;
 			this->listView1->HotTracking = true;
 			this->listView1->HoverSelection = true;
-			listViewItem1->Group = listViewGroup1;
-			listViewItem1->StateImageIndex = 0;
-			listViewItem1->ToolTipText = L"11";
-			listViewItem2->Group = listViewGroup1;
-			listViewItem2->StateImageIndex = 0;
-			listViewItem3->Group = listViewGroup1;
-			listViewItem3->StateImageIndex = 0;
-			listViewItem4->Group = listViewGroup1;
-			listViewItem5->Group = listViewGroup1;
-			this->listView1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(5) {listViewItem1, listViewItem2, 
-				listViewItem3, listViewItem4, listViewItem5});
+			listViewItem40->Group = listViewGroup8;
+			listViewItem40->StateImageIndex = 0;
+			listViewItem40->ToolTipText = L"11";
+			listViewItem41->Group = listViewGroup8;
+			listViewItem41->StateImageIndex = 0;
+			listViewItem42->Group = listViewGroup8;
+			listViewItem42->StateImageIndex = 0;
+			listViewItem43->Group = listViewGroup8;
+			listViewItem44->Group = listViewGroup8;
+			this->listView1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(5) {listViewItem40, listViewItem41, 
+				listViewItem42, listViewItem43, listViewItem44});
 			this->listView1->LabelEdit = true;
 			this->listView1->Location = System::Drawing::Point(3, 3);
 			this->listView1->Name = L"listView1";
@@ -526,7 +535,6 @@ private:
 			this->fastColoredTextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->fastColoredTextBox1->DisabledColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(180)), static_cast<System::Int32>(static_cast<System::Byte>(180)), static_cast<System::Int32>(static_cast<System::Byte>(180)));
-			this->fastColoredTextBox1->Font = (gcnew System::Drawing::Font(L"Courier New", 9.75F));
 			this->fastColoredTextBox1->IndentBackColor = System::Drawing::SystemColors::Window;
 			this->fastColoredTextBox1->IsReplaceMode = false;
 			this->fastColoredTextBox1->Language = FastColoredTextBoxNS::Language::SQL;
@@ -564,23 +572,23 @@ private:
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::RaisedVertical;
 			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, 
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {this->Column1, 
 				this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7});
 			this->dataGridView1->GridColor = System::Drawing::Color::Brown;
 			this->dataGridView1->Location = System::Drawing::Point(0, 0);
 			this->dataGridView1->Name = L"dataGridView1";
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			this->dataGridView1->RowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			this->dataGridView1->RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this->dataGridView1->Size = System::Drawing::Size(368, 379);
 			this->dataGridView1->TabIndex = 0;
 			// 
@@ -981,6 +989,7 @@ private:
 			this->tabControl3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) 
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->tabControl3->Controls->Add(this->tabPage5);
+			this->tabControl3->Controls->Add(this->tabPage8);
 			this->tabControl3->Controls->Add(this->tabPage6);
 			this->tabControl3->Controls->Add(this->tabPage7);
 			this->tabControl3->ItemSize = System::Drawing::Size(96, 18);
@@ -1020,67 +1029,67 @@ private:
 			this->listView2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->listView2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->listView2->ForeColor = System::Drawing::SystemColors::WindowText;
-			listViewGroup2->Header = L"Стандартные";
-			listViewGroup2->Name = L"listViewGroup4";
-			listViewGroup3->Header = L"Математические функции";
-			listViewGroup3->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup3->Name = L"math";
-			listViewGroup4->Header = L"Строковые функции";
-			listViewGroup4->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup4->Name = L"listViewGroup1";
-			listViewGroup5->Header = L"Стандартные функции";
-			listViewGroup5->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup5->Name = L"listViewGroup2";
-			listViewGroup6->Header = L"Функции датировок";
-			listViewGroup6->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup6->Name = L"listViewGroup3";
-			listViewGroup7->Header = L"Функции преобразования";
-			listViewGroup7->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
-			listViewGroup7->Name = L"listViewGroup5";
-			this->listView2->Groups->AddRange(gcnew cli::array< System::Windows::Forms::ListViewGroup^  >(6) {listViewGroup2, listViewGroup3, 
-				listViewGroup4, listViewGroup5, listViewGroup6, listViewGroup7});
+			listViewGroup9->Header = L"Стандартные";
+			listViewGroup9->Name = L"listViewGroup4";
+			listViewGroup10->Header = L"Математические функции";
+			listViewGroup10->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup10->Name = L"math";
+			listViewGroup11->Header = L"Строковые функции";
+			listViewGroup11->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup11->Name = L"listViewGroup1";
+			listViewGroup12->Header = L"Стандартные функции";
+			listViewGroup12->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup12->Name = L"listViewGroup2";
+			listViewGroup13->Header = L"Функции датировок";
+			listViewGroup13->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup13->Name = L"listViewGroup3";
+			listViewGroup14->Header = L"Функции преобразования";
+			listViewGroup14->HeaderAlignment = System::Windows::Forms::HorizontalAlignment::Center;
+			listViewGroup14->Name = L"listViewGroup5";
+			this->listView2->Groups->AddRange(gcnew cli::array< System::Windows::Forms::ListViewGroup^  >(6) {listViewGroup9, listViewGroup10, 
+				listViewGroup11, listViewGroup12, listViewGroup13, listViewGroup14});
 			this->listView2->HeaderStyle = System::Windows::Forms::ColumnHeaderStyle::Nonclickable;
 			this->listView2->HotTracking = true;
 			this->listView2->HoverSelection = true;
-			listViewItem6->Group = listViewGroup3;
-			listViewItem7->Group = listViewGroup3;
-			listViewItem8->Group = listViewGroup3;
-			listViewItem9->Group = listViewGroup3;
-			listViewItem10->Group = listViewGroup3;
-			listViewItem11->Group = listViewGroup3;
-			listViewItem12->Group = listViewGroup3;
-			listViewItem13->Group = listViewGroup4;
-			listViewItem14->Group = listViewGroup4;
-			listViewItem15->Group = listViewGroup4;
-			listViewItem16->Group = listViewGroup4;
-			listViewItem17->Group = listViewGroup4;
-			listViewItem18->Group = listViewGroup4;
-			listViewItem19->Group = listViewGroup4;
-			listViewItem20->Group = listViewGroup4;
-			listViewItem21->Group = listViewGroup4;
-			listViewItem22->Group = listViewGroup4;
-			listViewItem23->Group = listViewGroup6;
-			listViewItem24->Group = listViewGroup6;
-			listViewItem25->Group = listViewGroup6;
-			listViewItem26->Group = listViewGroup6;
-			listViewItem27->Group = listViewGroup6;
-			listViewItem28->Group = listViewGroup6;
-			listViewItem29->Group = listViewGroup7;
-			listViewItem30->Group = listViewGroup7;
-			listViewItem31->Group = listViewGroup2;
-			listViewItem32->Group = listViewGroup2;
-			listViewItem33->Group = listViewGroup2;
-			listViewItem34->Group = listViewGroup2;
-			listViewItem35->Group = listViewGroup2;
-			listViewItem36->Group = listViewGroup2;
-			listViewItem37->Group = listViewGroup2;
-			listViewItem38->Group = listViewGroup2;
-			listViewItem39->Group = listViewGroup2;
-			this->listView2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(34) {listViewItem6, listViewItem7, 
-				listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, 
-				listViewItem16, listViewItem17, listViewItem18, listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, 
-				listViewItem24, listViewItem25, listViewItem26, listViewItem27, listViewItem28, listViewItem29, listViewItem30, listViewItem31, 
-				listViewItem32, listViewItem33, listViewItem34, listViewItem35, listViewItem36, listViewItem37, listViewItem38, listViewItem39});
+			listViewItem45->Group = listViewGroup10;
+			listViewItem46->Group = listViewGroup10;
+			listViewItem47->Group = listViewGroup10;
+			listViewItem48->Group = listViewGroup10;
+			listViewItem49->Group = listViewGroup10;
+			listViewItem50->Group = listViewGroup10;
+			listViewItem51->Group = listViewGroup10;
+			listViewItem52->Group = listViewGroup11;
+			listViewItem53->Group = listViewGroup11;
+			listViewItem54->Group = listViewGroup11;
+			listViewItem55->Group = listViewGroup11;
+			listViewItem56->Group = listViewGroup11;
+			listViewItem57->Group = listViewGroup11;
+			listViewItem58->Group = listViewGroup11;
+			listViewItem59->Group = listViewGroup11;
+			listViewItem60->Group = listViewGroup11;
+			listViewItem61->Group = listViewGroup11;
+			listViewItem62->Group = listViewGroup13;
+			listViewItem63->Group = listViewGroup13;
+			listViewItem64->Group = listViewGroup13;
+			listViewItem65->Group = listViewGroup13;
+			listViewItem66->Group = listViewGroup13;
+			listViewItem67->Group = listViewGroup13;
+			listViewItem68->Group = listViewGroup14;
+			listViewItem69->Group = listViewGroup14;
+			listViewItem70->Group = listViewGroup9;
+			listViewItem71->Group = listViewGroup9;
+			listViewItem72->Group = listViewGroup9;
+			listViewItem73->Group = listViewGroup9;
+			listViewItem74->Group = listViewGroup9;
+			listViewItem75->Group = listViewGroup9;
+			listViewItem76->Group = listViewGroup9;
+			listViewItem77->Group = listViewGroup9;
+			listViewItem78->Group = listViewGroup9;
+			this->listView2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(34) {listViewItem45, listViewItem46, 
+				listViewItem47, listViewItem48, listViewItem49, listViewItem50, listViewItem51, listViewItem52, listViewItem53, listViewItem54, 
+				listViewItem55, listViewItem56, listViewItem57, listViewItem58, listViewItem59, listViewItem60, listViewItem61, listViewItem62, 
+				listViewItem63, listViewItem64, listViewItem65, listViewItem66, listViewItem67, listViewItem68, listViewItem69, listViewItem70, 
+				listViewItem71, listViewItem72, listViewItem73, listViewItem74, listViewItem75, listViewItem76, listViewItem77, listViewItem78});
 			this->listView2->LabelEdit = true;
 			this->listView2->Location = System::Drawing::Point(3, 3);
 			this->listView2->Name = L"listView2";
@@ -1103,8 +1112,8 @@ private:
 			// 
 			// dataGridView3
 			// 
-			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Snow;
-			this->dataGridView3->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle6->BackColor = System::Drawing::Color::Snow;
+			this->dataGridView3->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
 			this->dataGridView3->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
 			this->dataGridView3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dataGridView3->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::RaisedVertical;
@@ -1842,6 +1851,42 @@ private:
 			this->splitContainer1->SplitterDistance = 375;
 			this->splitContainer1->TabIndex = 15;
 			// 
+			// tabPage8
+			// 
+			this->tabPage8->Controls->Add(this->dataGridView4);
+			this->tabPage8->Location = System::Drawing::Point(4, 22);
+			this->tabPage8->Name = L"tabPage8";
+			this->tabPage8->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage8->Size = System::Drawing::Size(205, 400);
+			this->tabPage8->TabIndex = 3;
+			this->tabPage8->Text = L"Таблицы";
+			this->tabPage8->UseVisualStyleBackColor = true;
+			// 
+			// dataGridView4
+			// 
+			this->dataGridView4->AllowUserToAddRows = false;
+			this->dataGridView4->AllowUserToOrderColumns = true;
+			this->dataGridView4->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
+			this->dataGridView4->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dataGridView4->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView4->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) {this->Column16});
+			this->dataGridView4->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->dataGridView4->GridColor = System::Drawing::SystemColors::ActiveCaption;
+			this->dataGridView4->Location = System::Drawing::Point(3, 3);
+			this->dataGridView4->Name = L"dataGridView4";
+			this->dataGridView4->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->dataGridView4->RowHeadersVisible = false;
+			this->dataGridView4->Size = System::Drawing::Size(199, 394);
+			this->dataGridView4->TabIndex = 0;
+			this->dataGridView4->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &database_manager::dataGridView4_CellContentClick);
+			// 
+			// Column16
+			// 
+			this->Column16->HeaderText = L"Таблицы";
+			this->Column16->Name = L"Column16";
+			this->Column16->Width = 198;
+			// 
 			// database_manager
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1889,6 +1934,8 @@ private:
 			this->splitContainer1->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
+			this->tabPage8->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView4))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1916,6 +1963,8 @@ private:
 	System::Void toolStripButton1_Click						(System::Object^  sender, System::EventArgs^  e);
 	
 
+private: System::Void dataGridView4_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+		 }
 };
 
 } 

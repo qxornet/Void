@@ -326,3 +326,13 @@ using namespace SeePage;
 						"Ошибка выполнения запроса",
 						MessageBoxButtons::OK,
 						MessageBoxIcon::Exclamation);*/
+
+	   //TabPage page = new TabPage("New");
+    //page.BackColor = Color.LightBlue;
+    //tabMenu.TabPages.Add(page);
+ 
+    //Label label = new Label();
+    //label.Location = new Point(0, 0);
+    //label.Text = "Tab number " + (tabMenu.TabPages.Count - 1);
+    //label.AutoSize = true;
+    //page.Controls.Add(label);
