@@ -77,6 +77,13 @@ using namespace SeePage;
 			 sch += 1;
 }
 
+	System::Void database_manager::dataGridView4_CellContentClick			(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) 
+	{
+
+		
+
+	}
+	
 	System::Void database_manager::listView2_MouseClick						(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) 
 {
 			//Math functions
@@ -271,6 +278,14 @@ using namespace SeePage;
 					toolStripLabel1 -> Image = pictureBox1 -> Image;
 					connect	= gcnew OleDbConnection("provider = Microsoft.Jet.OLEDB.4.0; data source = " + dbc_addr);
 					is_open = true;
+
+					connect -> Open();
+					System::Data::DataTable^ tmp = connect -> GetSchema("Tables");
+					connect -> Close();
+
+					dataGridView1 -> DataSource = tmp;
+					
+
 				 }
 			 }
 }
@@ -321,6 +336,7 @@ using namespace SeePage;
 						  MessageBoxButtons ::OK,
 						  MessageBoxIcon	::Exclamation);
 }
+
 	//git fix
 	/*MessageBox::Show(L"Ошибка синтаксиса.", 
 						"Ошибка выполнения запроса",

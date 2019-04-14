@@ -1947,14 +1947,14 @@ private:
 	void		 addedBlockOfNormalSize						(	);
 	
 	void		 addedBlockOfFullSize						(	);
-	
+
+	System::Void listView2_MouseClick						(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e);
+
 	System::Void listView1_Click							(System::Object^  sender, System::EventArgs^  e);
 	
 	System::Void panel1_DoubleClick							(System::Object^  sender, System::EventArgs^  e);
 	
 	System::Void îòêðûòüToolStripButton_Click				(System::Object^  sender, System::EventArgs^  e);
-	
-	System::Void listView2_MouseClick						(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e);
 	
 	System::Void ïðîåêòToolStripMenuItem_Click				(System::Object^  sender, System::EventArgs^  e);
 	
@@ -1962,9 +1962,7 @@ private:
 	
 	System::Void toolStripButton1_Click						(System::Object^  sender, System::EventArgs^  e);
 	
-
-private: System::Void dataGridView4_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-		 }
+	System::Void dataGridView4_CellContentClick				(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e);
 };
 
 } 
