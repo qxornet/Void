@@ -1,5 +1,6 @@
 #include "database_connect.h"
 
+
 #pragma once
 
 using namespace System;
@@ -14,8 +15,9 @@ using namespace System::Data::OleDb;
 #define dbcn database_connect^
 #define strc  System::String
 
-namespace SeePage {
 
+namespace SeePage {
+		
 	public ref class database_manager : public System::Windows::Forms::Form
 	{
 
@@ -33,13 +35,7 @@ static		    bool			dbc_flag,
 								is_open;
 
 static		   OleDbConnection^ connect;
-	private: System::Windows::Forms::SplitContainer^  splitContainer1;
-	private: System::Windows::Forms::TabPage^  tabPage8;
-	private: System::Windows::Forms::DataGridView^  dataGridView4;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column16;
-
-
-			 static		   OleDbCommand^	command;
+static		   OleDbCommand^	command;
 
 public:
 		database_manager(void)
@@ -58,7 +54,8 @@ protected:
 		{
 			if (components)
 			{
-				delete components;
+				delete components,
+					 form_connect;
 			}
 		}
 
@@ -66,6 +63,10 @@ public:
 		System::Windows::Forms::MenuStrip^  menuStrip1;
 
 private: 
+		System::Windows::Forms::SplitContainer^  splitContainer1;
+		System::Windows::Forms::TabPage^  tabPage8;
+		System::Windows::Forms::DataGridView^  dataGridView4;
+		System::Windows::Forms::DataGridViewTextBoxColumn^  Column16;
 		System::Windows::Forms::ToolStripSeparator^			toolStripSeparator2;
 		System::Windows::Forms::ToolStripLabel^				toolStripLabel2; 
 		System::Windows::Forms::ToolStripLabel^				toolStripLabel1;
@@ -1944,9 +1945,12 @@ private:
 #pragma endregion
 
 private: 
+
 	void		 addedBlockOfNormalSize						(	);
 	
 	void		 addedBlockOfFullSize						(	);
+
+	System::Void dataGridView4_CellContentClick				(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e);
 
 	System::Void listView2_MouseClick						(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e);
 
@@ -1961,8 +1965,6 @@ private:
 	System::Void ìåíåäæåðÏðîåêòîâToolStripMenuItem_Click	(System::Object^  sender, System::EventArgs^  e);
 	
 	System::Void toolStripButton1_Click						(System::Object^  sender, System::EventArgs^  e);
-	
-	System::Void dataGridView4_CellContentClick				(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e);
 };
 
 } 

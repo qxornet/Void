@@ -236,7 +236,6 @@ using namespace SeePage;
 
 	System::Void database_manager::ïðîåêòToolStripMenuItem_Click			(System::Object^  sender, System::EventArgs^  e) 
 {
-
 			if (folderBrowserDialog1->ShowDialog()== System::Windows::Forms::DialogResult::OK) 
 			{
 
@@ -283,9 +282,7 @@ using namespace SeePage;
 					System::Data::DataTable^ tmp = connect -> GetSchema("Tables");
 					connect -> Close();
 
-					dataGridView1 -> DataSource = tmp;
-					
-
+					dataGridView1 -> DataSource = tmp;			
 				 }
 			 }
 }

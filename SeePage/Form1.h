@@ -9,7 +9,6 @@
 #include "NewElement.h"
 #include "CreateLibs.h"
 
-
 #define NULL 0
 
 namespace SeePage {
