@@ -1,7 +1,7 @@
 // SeePage.cpp: главный файл проекта.
 #include "stdafx.h"
-#include "database_manager.h"
-#include "Form1.h"
+#include "RelationThreadModule.h"
+#include "SeePageModule.h"
 #include "logo.h"
 #include "net_classWrtServer.h"
 #include "cipher_manage.h"
@@ -23,13 +23,13 @@ int main(array<System::String ^> ^args)
 	logo^ varianceWindow = gcnew logo();
 	switch(varianceWindow->variance) {
 	case 1:
-	Application::Run(gcnew Form1());
+	Application::Run(gcnew SeePageModule());
 	break;
 	case 2:
 	Application::Run(gcnew net_classWrtServer());
 	break;
 	case 3: 
-	Application::Run(gcnew database_manager());
+	Application::Run(gcnew RelationThreadModule());
 	break;
 	case 4: 
 	Application::Run(gcnew cipher_manage());

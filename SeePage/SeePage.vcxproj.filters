@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -27,15 +24,6 @@
     <ClCompile Include="CreateLibs.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Form1.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="Form2.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="Form21.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="Helper.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
@@ -43,9 +31,6 @@
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="MailSend.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="New.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="NewElement.cpp">
@@ -72,7 +57,13 @@
     <ClCompile Include="database_connect.cpp">
       <Filter>Заголовочные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="database_manager.cpp">
+    <ClCompile Include="SeePageModule.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="RelationThreadModule.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateProjectModule.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,9 +74,6 @@
     <ClInclude Include="CreateLibs.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Helper.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -93,9 +81,6 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="MailSend.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="New.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="NewElement.h">
@@ -116,9 +101,6 @@
     <ClInclude Include="MathVoidDB.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="database_manager.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="cipher_manage.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -128,14 +110,21 @@
     <ClInclude Include="database_connect.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="SeePageModule.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="RelationThreadModule.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateProjectModule.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.ico">
       <Filter>Файлы ресурсов</Filter>
     </None>
     <None Include="ReadMe.txt" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -149,9 +138,6 @@
     <EmbeddedResource Include="CreateLibs.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resX">
-      <Filter>Файлы ресурсов</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="Helper.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
@@ -159,9 +145,6 @@
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="MailSend.resx">
-      <Filter>Файлы ресурсов</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="New.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="NewElement.resx">
@@ -173,13 +156,19 @@
     <EmbeddedResource Include="net_classWrtServer.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="database_manager.resx">
-      <Filter>Файлы ресурсов</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="cipher_manage.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="database_connect.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeePageModule.resX">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelationThreadModule.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateProjectModule.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,4 +1,4 @@
-#include "Form1.h"
+#include "SeePageModule.h"
 
 #pragma once
 
